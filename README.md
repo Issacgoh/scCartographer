@@ -1,12 +1,33 @@
-# Multimodal_Probabillistic_Ensemble_Transfer_Learning framework
-This repository contains code and utils for learning methods which focus on leveraging intergrative latent encodings learnt from dimensionality reduction techniques. 
--   Leverage score sampling
--   KNN bayesian sampling
--   GNN learning
--   Empirical bayesian frameworks are leveraged for quality control
--   Label quality harmonisation (weighted R2 and F1)
--   
 
+# My scRNA-seq Analysis Package
 
-## 1: low_dimensional_logistic_regression_learning_probabillistic_transfer
-This repository contains a prototype classifier developed for mapping large sc-multiomic datasets using pre-integrated low-dimensional latent embeddings as input. If given input is linear, a weighted score for feature importance of predicted classes may be derived. Else, we can estimate this using a bayesian DE approach.
+This package provides functions for processing single-cell RNA-seq data, training logistic regression models, and post-processing the model outputs.
+
+The unique architecture of this package uses a non low-dimensional latent representation of single cell data, which captures non-linear cell relationships. It trains a Bayesian-optimized ElasticNet regressor which effectively provides probabilistic relationships between a set of training and query data and labels.
+
+## Installation
+
+You can install this package by cloning the GitHub repository and running `python setup.py install`.
+
+## Usage
+
+The main parts of the package are the data processing, modeling, and post-processing modules. Here's a basic example of how to use the package:
+
+```python
+from my_package import data_processing, modeling, post_processing, feature_estimator
+
+# Load and preprocess the data
+data = data_processing.load_data('my_data.csv')
+preprocessed_data = data_processing.preprocess_data(data)
+
+# Train the model
+model = modeling.train_model(preprocessed_data)
+
+# Use the model to make predictions
+predictions = modeling.make_predictions(model, preprocessed_data)
+
+# Post-process the predictions
+processed_predictions = post_processing.process_predictions(predictions)
+```
+
+Please note that this is a high-level example and the actual usage will depend on your specific data and requirements.
