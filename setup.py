@@ -1,1 +1,1 @@
-# Placeholder content
+# setup.py for scCartographer package
