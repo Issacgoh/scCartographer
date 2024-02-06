@@ -16,7 +16,7 @@
 To get started with `scCartographer`, install the package and follow the usage instructions for setting up your analysis environment.
 
 ```bash
-pip install scCartographer
+pip install git+git@github.com:Issacgoh/scCartographer
 ```
 
 ## Usage
