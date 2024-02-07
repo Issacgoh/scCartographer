@@ -1,3 +1,5 @@
+<img src="/resources/scCart_logo.webp?raw=true" alt="logo" width="100" height="100">
+
 # scCartographer: Low-dimensional probabillistic transductive format transfer learning and mapping across latent spaces
 
 ## Introduction
@@ -49,6 +51,23 @@ The package employs Bayesian optimization to fine-tune the Elastic Net model, ma
 - "Mapping the Developing Human Immune System Across Organs" as a preprint, DOI: 10.1101/2022.01.17.476665
 - "Blood and Immune Development in Human Fetal Bone Marrow and Down Syndrome" in Nature, DOI: 10.1038/s41586-021-03929-x
 - "Developmental Cell Programs are Co-opted in Inflammatory Skin Disease" in Science, DOI: 10.1126/science.aba6500
+
+## Example outs
+- scCartographer provides a framework for training Bayesian optimised label transfer models (Elasticnet) on the joint-latent representation of anchor states with integrated data for efficient mapping and harmonization of atlas data. scCartographer also allows user to study relative feature impact on modelling decisions and output probability 
+
+![Alt text](/resources/cross_atlas_probabillistic_projection.png?raw=true "cross_atlas mapping and probabillistic projection")
+
+- Training can be performed relative to any subset of the latent representation
+![Alt text](/resources/general_model_self_projection.png?raw=true "single tissue mapping and probabillistic projection")
+
+- scCartographer additionally provides modules to study relative feature impacts and associated gene expression pathways/modules on specific model decisions, allowing users to assess model relevance
+![Alt text](/resources/Kera_positive_features.png?raw=true "Positive features")
+![Alt text](/resources/Kera_negative_features.png?raw=true "Negative features")
+
+
+- scCartographer provides modules to cluster and study predicted expression programs between shared/differential states based on weighted semantic similarity and shared genes within mixtures of any defined database (e.g GOBP, KEGG)
+![Alt text](/resources/cluster_expression_prorgams_1.png?raw=true "Markov clusters semantic programs 1")
+![Alt text](/resources/cluster_expression_prorgams_2.png?raw=true "Markov clusters semantic programs 1")
 
 ## Project Team
 
